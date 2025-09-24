@@ -31,9 +31,9 @@ To start the container without the helper script, run the command inside `run_se
 
 ## Working With the Workspace
 - All Evidently artifacts (projects, dashboards, snapshots) live inside `workspace/`.
-- Each subfolder corresponds to an Evidently project. For example, `workspace/01983113-e714-70b7-9f6c-453adbbd6046/` contains the Iris Monitoring project and its saved snapshots.
+- Each subfolder corresponds to an Evidently project. For example, `workspace/{project.id}/` contains a project and its saved snapshots.
 - Any updates you make through the web UI or API are written back to these folders because the container mounts the directory as a volume.
-- To reset the workspace, stop the container and remove or replace the relevant folders before starting the service again.
+- To reset the workspace, remove or replace the relevant folders directly, or via the evidently dashboard sdk.
 
 ## Generating New Reports
 1. Install dependencies:
@@ -44,7 +44,7 @@ To start the container without the helper script, run the command inside `run_se
    ```bash
    uv run jupyter lab
    ```
-3. Use the notebook to compute metrics, generate Evidently reports, and upload them to the running service. Any artifacts created from the notebook runs will be saved into `workspace/`.
+3. Run `generate_reports.ipynb` to compute metrics, generate Evidently reports, and upload them to the running service. Any artifacts created from the notebook runs will be saved into `workspace/`.
 
 > Important: When running notebooks, ensure the Docker container is up so that API calls to the Evidently service succeed.
 
