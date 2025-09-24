@@ -2,6 +2,8 @@
 
 This repository packages a ready-to-run Evidently monitoring service with sample projects and dashboards. It is meant as a starting point for experimenting with the Evidently self-hosted service, exploring example workspaces, and extending them with your own reports.
 
+Docker is required to run the included Evidently service; install it before starting the quickstart steps.
+
 ## Features
 - Preconfigured Evidently workspace with two demo monitoring projects (Iris classification and German credit risk)
 - Docker script for spinning up the Evidently service pinned to this workspace
