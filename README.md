@@ -44,7 +44,7 @@ To start the container without the helper script, run the command inside `run_se
    ```bash
    uv run jupyter lab
    ```
-3. Run `generate_reports.ipynb` to compute metrics, generate Evidently reports, and upload them to the running service. Any artifacts created from the notebook runs will be saved into `workspace/`.
+3. Run `generate_reports.ipynb` to generate Evidently monitoring reports. Any artifacts created from the notebook runs will be saved into `workspace/`.
 
 > Important: When running notebooks, ensure the Docker container is up so that API calls to the Evidently service succeed.
 
